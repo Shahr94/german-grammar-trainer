@@ -1,0 +1,1217 @@
+[
+  {
+    "question_id": "ex1_1",
+    "difficulty_level": "B2",
+    "type": "micro_translation",
+    "target_rules": ["passiv_ersatz_sich_lassen"],
+    "content": {
+      "native_prompt": "Translate using 'sich lassen': 'Can everything be learned?'",
+      "surrounding_context": "[ ... ]?",
+      "correct_translation": "Lässt sich alles lernen"
+    },
+    "explanation_markdown": "**sich lassen + Infinitiv** replaces *können + Passiv* (Kann man alles lernen? -> Lässt sich alles lernen?)[cite: 1]."
+  },
+  {
+    "question_id": "ex1_2",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_ersatz_sich_lassen", "subordinate_verb_last"],
+    "content": {
+      "base_sentence": "Man muss immer bedenken, dass {1} fast alles trainieren {2}, und durch regelmäßiges Training {3} das meiste immer mehr verbessern.",
+      "translation": "One must always consider that almost everything can be trained, and through regular training most things can be improved more and more.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "sich",
+          "rule_trigger": "passiv_ersatz_sich_lassen",
+          "hint": "reflexive pronoun"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "lässt",
+          "rule_trigger": "subordinate_verb_last",
+          "hint": "3rd person singular of lassen"
+        },
+        {
+          "placeholder_id": "{3}",
+          "correct_answer": "lässt sich",
+          "rule_trigger": "passiv_ersatz_sich_lassen",
+          "hint": "verb + reflexive pronoun (inversion)"
+        }
+      ]
+    },
+    "explanation_markdown": "In the subordinate clause (*dass*), the conjugated verb **lässt** moves to the end while **sich** follows the conjunction[cite: 4]. In the second main clause, inversion places **lässt sich** directly after the prepositional phrase[cite: 4]."
+  },
+  {
+    "question_id": "ex1_3",
+    "difficulty_level": "B2",
+    "type": "syntax_sorting",
+    "target_rules": ["passiv_ersatz_sich_lassen", "subordinate_clause_wenn"],
+    "content": {
+      "shuffled_chunks": ["vorbereiten und üben,", "Auch jede Prüfung", "Zeit investieren lässt.", "lässt sich", "wenn sich genug"],
+      "correct_order": ["Auch jede Prüfung", "lässt sich", "vorbereiten und üben,", "wenn sich genug", "Zeit investieren lässt."],
+      "translation": "Every exam can also be prepared for and practiced if enough time can be invested."
+    },
+    "explanation_markdown": "Replaces *kann vorbereitet und geübt werden* and *wenn man ... investieren kann* with **sich lassen + Infinitiv**[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex1_4",
+    "difficulty_level": "B2",
+    "type": "error_correction",
+    "target_rules": ["passiv_ersatz_sich_lassen"],
+    "content": {
+      "flawed_sentence": "Aber nicht alles lässt sich planen und der Erfolg lässt sich nicht garantiert, denn wir Menschen sind nicht perfekt.",
+      "target_error": "garantiert",
+      "correct_replacement": "garantieren",
+      "translation": "But not everything can be planned and success cannot be guaranteed, because we humans are not perfect."
+    },
+    "explanation_markdown": "The construction **sich lassen** requires the **Infinitiv** (*garantieren*)[cite: 1, 4], not the Partizip II (*garantiert*)."
+  },
+  {
+    "question_id": "ex2_1",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_ersatz_sein_zu_infinitiv"],
+    "content": {
+      "base_sentence": "{1} die Welt noch {2}?",
+      "translation": "Can the world still be saved?",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "Ist",
+          "rule_trigger": "passiv_ersatz_sein_zu_infinitiv",
+          "hint": "3rd person singular of sein"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "zu retten",
+          "rule_trigger": "passiv_ersatz_sein_zu_infinitiv",
+          "hint": "zu + Infinitiv (save)"
+        }
+      ]
+    },
+    "explanation_markdown": "**sein + zu + Infinitiv** expresses possibility or necessity in a passive sense (*Ist die Welt noch zu retten?* = Kann die Welt noch gerettet werden?)[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex2_2",
+    "difficulty_level": "B2",
+    "type": "micro_translation",
+    "target_rules": ["passiv_ersatz_sein_zu_infinitiv"],
+    "content": {
+      "native_prompt": "Translate using 'sein + zu': 'can be cured'",
+      "surrounding_context": "Nicht alle Krankheiten [ ... ].",
+      "correct_translation": "sind zu heilen"
+    },
+    "explanation_markdown": "Plural subject (*Krankheiten*) takes **sind + zu + heilen**[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex2_3",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_ersatz_sein_zu_infinitiv"],
+    "content": {
+      "base_sentence": "Manche Situationen sind so schlimm, sie {1} fast nicht {2}.",
+      "translation": "Some situations are so bad, they can almost not be endured.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "sind",
+          "rule_trigger": "passiv_ersatz_sein_zu_infinitiv",
+          "hint": "conjugated form of sein"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "zu ertragen",
+          "rule_trigger": "passiv_ersatz_sein_zu_infinitiv",
+          "hint": "zu + Infinitiv (endure/bear)"
+        }
+      ]
+    },
+    "explanation_markdown": "Uses **sind ... zu ertragen** to express *können fast nicht ertragen werden*[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex2_4",
+    "difficulty_level": "B2",
+    "type": "error_correction",
+    "target_rules": ["passiv_ersatz_sein_zu_infinitiv"],
+    "content": {
+      "flawed_sentence": "Das Wetter ist leider nicht ändern.",
+      "target_error": "ändern",
+      "correct_replacement": "zu ändern",
+      "translation": "Unfortunately, the weather cannot be changed."
+    },
+    "explanation_markdown": "The passive alternative with *sein* strictly requires **zu + Infinitiv** (*ist ... zu ändern*)[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex2_5",
+    "difficulty_level": "B2",
+    "type": "syntax_sorting",
+    "target_rules": ["passiv_ersatz_sein_zu_infinitiv"],
+    "content": {
+      "shuffled_chunks": ["selten direkt", "sind", "zu übersetzen.", "Idiomatische Ausdrücke"],
+      "correct_order": ["Idiomatische Ausdrücke", "sind", "selten direkt", "zu übersetzen."],
+      "translation": "Idiomatic expressions can rarely be translated directly."
+    },
+    "explanation_markdown": "Conjugated **sind** stays in position 2, while **zu übersetzen** forms the right sentence bracket[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex2_6",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_ersatz_sein_zu_infinitiv"],
+    "content": {
+      "base_sentence": "Ich beeile mich und gebe mir Mühe. Aber ich glaube, alle Aufgaben {1} einfach nicht {2}.",
+      "translation": "I hurry and make an effort. But I believe all tasks simply cannot be managed.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "sind",
+          "rule_trigger": "passiv_ersatz_sein_zu_infinitiv",
+          "hint": "3rd person plural of sein"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "zu schaffen",
+          "rule_trigger": "passiv_ersatz_sein_zu_infinitiv",
+          "hint": "zu + Infinitiv (manage/accomplish)"
+        }
+      ]
+    },
+    "explanation_markdown": "In an unintroduced subordinate clause after *Ich glaube*, standard main clause word order applies: **sind ... zu schaffen**[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex2_7",
+    "difficulty_level": "B2",
+    "type": "micro_translation",
+    "target_rules": ["passiv_ersatz_sein_zu_infinitiv"],
+    "content": {
+      "native_prompt": "Translate using 'sein + zu': 'it is to be expected'",
+      "surrounding_context": "Wenn jemand in ein Bewerbungsgespräch kommt, [ ... ], dass er sich darauf vorbereitet hat.",
+      "correct_translation": "ist zu erwarten"
+    },
+    "explanation_markdown": "Because the *wenn*-clause is in position 1, the main clause starts directly with the finite verb **ist** followed by **zu erwarten** (inversion, dropping placeholder *es*)[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex2_8",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_ersatz_sein_zu_infinitiv", "separable_verbs_zu"],
+    "content": {
+      "base_sentence": "{1} Sorgen und Probleme jemals {2}?",
+      "translation": "Can worries and problems ever be abolished?",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "Sind",
+          "rule_trigger": "passiv_ersatz_sein_zu_infinitiv",
+          "hint": "Plural form of sein"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "abzuschaffen",
+          "rule_trigger": "separable_verbs_zu",
+          "hint": "abschaffen with infixed 'zu'"
+        }
+      ]
+    },
+    "explanation_markdown": "With separable verbs like *abschaffen*, **zu** is placed between the prefix and the verb stem: **abzuschaffen**[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex2_9",
+    "difficulty_level": "B2",
+    "type": "error_correction",
+    "target_rules": ["separable_verbs_zu", "passiv_ersatz_sein_zu_infinitiv"],
+    "content": {
+      "flawed_sentence": "Ein defektes Rad ist nicht leicht zu auswechseln.",
+      "target_error": "zu auswechseln",
+      "correct_replacement": "auszuwechseln",
+      "translation": "A defective wheel is not easy to replace."
+    },
+    "explanation_markdown": "*auswechseln* has a separable prefix (*aus-*), so *zu* must be inserted inside the verb: **auszuwechseln**[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex2_10",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_ersatz_sein_zu_infinitiv"],
+    "content": {
+      "base_sentence": "Wie {1} in zwanzig Jahren noch alle Menschen {2}?",
+      "translation": "How are all people still to be fed in twenty years?",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "sind",
+          "rule_trigger": "passiv_ersatz_sein_zu_infinitiv",
+          "hint": "sein (3rd person plural)"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "zu ernähren",
+          "rule_trigger": "passiv_ersatz_sein_zu_infinitiv",
+          "hint": "zu + Infinitiv (feed)"
+        }
+      ]
+    },
+    "explanation_markdown": "*ernähren* has an inseparable prefix (*er-*), so *zu* stands separately before the verb: **sind ... zu ernähren**[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex3_1",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_ersatz_adjektiv_bar"],
+    "content": {
+      "base_sentence": "Der Pullover ist bei 30 Grad {1}.",
+      "translation": "The sweater is washable at 30 degrees.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "waschbar",
+          "rule_trigger": "passiv_ersatz_adjektiv_bar",
+          "hint": "waschen + -bar"
+        }
+      ]
+    },
+    "explanation_markdown": "Verb stem *wasch-* + suffix **-bar** replaces *kann gewaschen werden*[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex3_2",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_ersatz_adjektiv_bar"],
+    "content": {
+      "base_sentence": "Das Möbelstück ist zum Transport {1}.",
+      "translation": "The piece of furniture can be disassembled for transport.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "zerlegbar",
+          "rule_trigger": "passiv_ersatz_adjektiv_bar",
+          "hint": "zerlegen + -bar"
+        }
+      ]
+    },
+    "explanation_markdown": "Verb stem *zerleg-* + **-bar** = **zerlegbar** (replaces *kann zerlegt werden*)[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex3_3",
+    "difficulty_level": "B2",
+    "type": "error_correction",
+    "target_rules": ["passiv_ersatz_adjektiv_abel"],
+    "content": {
+      "flawed_sentence": "Die Einrichtung ist jederzeit variierabel.",
+      "target_error": "variierabel",
+      "correct_replacement": "variabel",
+      "translation": "The furnishing can be varied at any time."
+    },
+    "explanation_markdown": "Verbs ending in *-ieren* (*variieren*) drop *-ieren* when forming adjectives with **-abel**: **variabel**[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex3_4",
+    "difficulty_level": "B2",
+    "type": "micro_translation",
+    "target_rules": ["passiv_ersatz_adjektiv_lich"],
+    "content": {
+      "native_prompt": "Rewrite with an adjective ending in '-lich': 'Einen korrupten Menschen kann man kaufen.'",
+      "surrounding_context": "[ ... ].",
+      "correct_translation": "Ein korrupter Mensch ist käuflich"
+    },
+    "explanation_markdown": "The accusative object becomes the nominative subject (*Ein korrupter Mensch*), and *kaufen* + *-lich* takes an Umlaut: **käuflich**[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex3_5",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_ersatz_adjektiv_bar"],
+    "content": {
+      "base_sentence": "Glas ist gut {1}.",
+      "translation": "Glass is easily recyclable.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "recycelbar",
+          "rule_trigger": "passiv_ersatz_adjektiv_bar",
+          "hint": "recyceln + -bar"
+        }
+      ]
+    },
+    "explanation_markdown": "*recyceln* drops the final *-n* and adds **-bar**: **recycelbar**[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex3_6",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_ersatz_adjektiv_abel"],
+    "content": {
+      "base_sentence": "Das Auto ist nicht mehr {1}.",
+      "translation": "The car is no longer repairable.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "reparabel",
+          "rule_trigger": "passiv_ersatz_adjektiv_abel",
+          "hint": "reparieren + -abel"
+        }
+      ]
+    },
+    "explanation_markdown": "*reparieren* with suffix **-abel** becomes **reparabel**[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex4_1",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["praeteritum_sein", "passiv_ersatz_adjektiv_abel"],
+    "content": {
+      "base_sentence": "Der Tumor {1} operabel.",
+      "translation": "The tumor was operable.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "war",
+          "rule_trigger": "praeteritum_sein",
+          "hint": "Präteritum of 'ist'"
+        }
+      ]
+    },
+    "explanation_markdown": "In the Präteritum, *ist operabel* becomes **war operabel**[cite: 1]."
+  },
+  {
+    "question_id": "ex4_2",
+    "difficulty_level": "B2",
+    "type": "syntax_sorting",
+    "target_rules": ["perfekt_sich_lassen", "ersatzinfinitiv"],
+    "content": {
+      "shuffled_chunks": ["Voraussage", "Es hat sich", "machen lassen.", "keine genaue"],
+      "correct_order": ["Es hat sich", "keine genaue", "Voraussage", "machen lassen."],
+      "translation": "No exact prediction could be made."
+    },
+    "explanation_markdown": "In the Perfekt, **sich lassen + Infinitiv** uses *haben* and the double infinitive (**Ersatzinfinitiv**: *hat sich ... machen lassen*)[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex4_3",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["futur_1_sein_zu_infinitiv"],
+    "content": {
+      "base_sentence": "Diese Argumente {1} zu ignorieren {2}.",
+      "translation": "These arguments will have to be ignored.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "werden",
+          "rule_trigger": "futur_1_sein_zu_infinitiv",
+          "hint": "Futur I auxiliary (plural)"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "sein",
+          "rule_trigger": "futur_1_sein_zu_infinitiv",
+          "hint": "Infinitiv at end of clause"
+        }
+      ]
+    },
+    "explanation_markdown": "Futur I of *sind zu ignorieren* is formed with **werden + zu + Infinitiv + sein**[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex4_4",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["konjunktiv_2_gegenwart_lassen"],
+    "content": {
+      "base_sentence": "Dieser Termin {1} sich kaum einhalten.",
+      "translation": "This appointment could hardly be kept.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "ließe",
+          "rule_trigger": "konjunktiv_2_gegenwart_lassen",
+          "hint": "One-word Konjunktiv II of 'lässt'"
+        }
+      ]
+    },
+    "explanation_markdown": "Konjunktiv II Gegenwart of *lässt sich ... einhalten* is **ließe sich ... einhalten** (or *würde sich ... einhalten lassen*)[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex4_5",
+    "difficulty_level": "B2",
+    "type": "error_correction",
+    "target_rules": ["konjunktiv_1_indirekte_rede"],
+    "content": {
+      "flawed_sentence": "Manche Blumen sind essbar.",
+      "target_error": "sind",
+      "correct_replacement": "seien",
+      "translation": "Some flowers are said to be edible."
+    },
+    "explanation_markdown": "In indirect speech (Konjunktiv I), 3rd person plural of *sein* is **seien**[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex4_6",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["konjunktiv_1_indirekte_rede"],
+    "content": {
+      "base_sentence": "Mein Chef meint, diese Aufgabe {1} kaum zu bewältigen.",
+      "translation": "My boss thinks this task is hardly manageable.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "sei",
+          "rule_trigger": "konjunktiv_1_indirekte_rede",
+          "hint": "Konjunktiv I (3rd person singular) of 'sein'"
+        }
+      ]
+    },
+    "explanation_markdown": "3rd person singular Konjunktiv I of *ist* is **sei**[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex4_7",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["praeteritum_sein"],
+    "content": {
+      "base_sentence": "Die Schrift {1} total unleserlich.",
+      "translation": "The handwriting was totally illegible.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "war",
+          "rule_trigger": "praeteritum_sein",
+          "hint": "Präteritum of 'ist'"
+        }
+      ]
+    },
+    "explanation_markdown": "Simple past (Präteritum) of *ist* is **war**[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex4_8",
+    "difficulty_level": "B2",
+    "type": "micro_translation",
+    "target_rules": ["perfekt_sich_lassen", "ersatzinfinitiv"],
+    "content": {
+      "native_prompt": "Put 'Das lässt sich machen!' into the Perfekt tense:",
+      "surrounding_context": "[ ... ]!",
+      "correct_translation": "Das hat sich machen lassen"
+    },
+    "explanation_markdown": "Perfekt of *sich lassen + Infinitiv* takes **hat sich + Infinitiv + lassen**[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex4_9",
+    "difficulty_level": "B2",
+    "type": "syntax_sorting",
+    "target_rules": ["konjunktiv_2_vergangenheit_sein_zu"],
+    "content": {
+      "shuffled_chunks": ["vorherzusehen", "Die Katastrophe", "gewesen.", "wäre"],
+      "correct_order": ["Die Katastrophe", "wäre", "vorherzusehen", "gewesen."],
+      "translation": "The catastrophe could have been foreseen."
+    },
+    "explanation_markdown": "Konjunktiv II Vergangenheit of *ist vorherzusehen* uses **wäre + zu-Infinitiv + gewesen**[cite: 1, 4]."
+  },
+  {
+    "question_id": "ex5_1",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_ersatz_transformation", "passiv_ersatz_sich_lassen", "passiv_ersatz_adjektiv_bar"],
+    "content": {
+      "base_sentence": "Aktiv: Man {1} die Pläne ändern. | sich lassen: Die Pläne {2} ändern. | Adjektiv: Die Pläne sind {3}.",
+      "translation": "Active: One can change the plans. | sich lassen: The plans can be changed. | Adjective: The plans are changeable.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "kann",
+          "rule_trigger": "passiv_ersatz_transformation",
+          "hint": "Modal verb (3rd person singular)"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "lassen sich",
+          "rule_trigger": "passiv_ersatz_sich_lassen",
+          "hint": "lassen (plural) + reflexive pronoun"
+        },
+        {
+          "placeholder_id": "{3}",
+          "correct_answer": "änderbar",
+          "rule_trigger": "passiv_ersatz_adjektiv_bar",
+          "hint": "ändern + -bar"
+        }
+      ]
+    },
+    "explanation_markdown": "Row 1 transformations in Präsens across active, *sich lassen*, and *-bar* adjective forms[cite: 2, 4]."
+  },
+  {
+    "question_id": "ex5_2",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_modal_praeteritum", "passiv_ersatz_sein_zu_infinitiv"],
+    "content": {
+      "base_sentence": "Passiv: Der Vertrag {1} nicht {2} werden. | sein + zu: Der Vertrag {3} nicht {4}.",
+      "translation": "Passive: The contract could not be terminated. | sein + zu: The contract was not terminable.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "konnte",
+          "rule_trigger": "passiv_modal_praeteritum",
+          "hint": "Präteritum of können"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "gekündigt",
+          "rule_trigger": "passiv_modal_praeteritum",
+          "hint": "Partizip II of kündigen"
+        },
+        {
+          "placeholder_id": "{3}",
+          "correct_answer": "war",
+          "rule_trigger": "passiv_ersatz_sein_zu_infinitiv",
+          "hint": "Präteritum of sein"
+        },
+        {
+          "placeholder_id": "{4}",
+          "correct_answer": "zu kündigen",
+          "rule_trigger": "passiv_ersatz_sein_zu_infinitiv",
+          "hint": "zu + Infinitiv"
+        }
+      ]
+    },
+    "explanation_markdown": "Row 2 transformations in Präteritum (*konnte nicht gekündigt werden* / *war nicht zu kündigen*)[cite: 2, 4]."
+  },
+  {
+    "question_id": "ex5_3",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["futur_1_modal_aktiv", "futur_1_sich_lassen", "passiv_ersatz_adjektiv_bar"],
+    "content": {
+      "base_sentence": "Aktiv: Wie wird man die Umweltverschmutzung {1}? | sich lassen: Wie wird sich die Umweltverschmutzung {2}? | Adjektiv: Wie wird die Umweltverschmutzung {3} sein?",
+      "translation": "How will we be able to stop pollution?",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "aufhalten können",
+          "rule_trigger": "futur_1_modal_aktiv",
+          "hint": "Infinitiv + modal verb"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "aufhalten lassen",
+          "rule_trigger": "futur_1_sich_lassen",
+          "hint": "Infinitiv + lassen"
+        },
+        {
+          "placeholder_id": "{3}",
+          "correct_answer": "aufhaltbar",
+          "rule_trigger": "passiv_ersatz_adjektiv_bar",
+          "hint": "aufhalten + -bar"
+        }
+      ]
+    },
+    "explanation_markdown": "Row 3 transformations in Futur I using **wird ... aufhalten können**, **wird sich ... aufhalten lassen**, and **wird ... aufhaltbar sein**[cite: 2, 4]."
+  },
+  {
+    "question_id": "ex5_4",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_modal_perfekt", "perfekt_sein_zu_infinitiv"],
+    "content": {
+      "base_sentence": "Passiv: Die Batterie hat {1} werden {2}. | sein + zu: Die Batterie ist {3} gewesen.",
+      "translation": "The battery could be replaced.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "ersetzt",
+          "rule_trigger": "passiv_modal_perfekt",
+          "hint": "Partizip II of ersetzen"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "können",
+          "rule_trigger": "passiv_modal_perfekt",
+          "hint": "Ersatzinfinitiv of modal verb"
+        },
+        {
+          "placeholder_id": "{3}",
+          "correct_answer": "zu ersetzen",
+          "rule_trigger": "perfekt_sein_zu_infinitiv",
+          "hint": "zu + Infinitiv"
+        }
+      ]
+    },
+    "explanation_markdown": "Row 4 transformations in Perfekt: Passive with modal verb uses **hat + Partizip II + werden + können**; *sein + zu* uses **ist + zu + Infinitiv + gewesen**[cite: 2, 4]."
+  },
+  {
+    "question_id": "ex5_5",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["konjunktiv_2_gegenwart_lassen", "passiv_ersatz_adjektiv_abel"],
+    "content": {
+      "base_sentence": "Aktiv: Man {1} Sehfehler operieren. | sich lassen: Sehfehler {2} sich operieren. | Adjektiv: Sehfehler könnten {3} sein.",
+      "translation": "Visual defects could be operated on.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "könnte",
+          "rule_trigger": "konjunktiv_2_gegenwart_lassen",
+          "hint": "Konjunktiv II singular of können"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "ließen",
+          "rule_trigger": "konjunktiv_2_gegenwart_lassen",
+          "hint": "One-word Konjunktiv II plural of lassen"
+        },
+        {
+          "placeholder_id": "{3}",
+          "correct_answer": "operabel",
+          "rule_trigger": "passiv_ersatz_adjektiv_abel",
+          "hint": "operieren + -abel"
+        }
+      ]
+    },
+    "explanation_markdown": "Row 5 transformations in Konjunktiv II Gegenwart (*könnte*, *ließen sich* / *würden sich ... lassen*, *operabel*)[cite: 2, 4]."
+  },
+  {
+    "question_id": "ex5_6",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["konjunktiv_2_vergangenheit_passiv_modal", "konjunktiv_2_vergangenheit_sein_zu"],
+    "content": {
+      "base_sentence": "Passiv: Die Aufgabe hätte {1} werden {2}. | sein + zu: Die Aufgabe wäre {3} gewesen.",
+      "translation": "The task could have been solved.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "gelöst",
+          "rule_trigger": "konjunktiv_2_vergangenheit_passiv_modal",
+          "hint": "Partizip II of lösen"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "können",
+          "rule_trigger": "konjunktiv_2_vergangenheit_passiv_modal",
+          "hint": "Modal verb in Infinitiv"
+        },
+        {
+          "placeholder_id": "{3}",
+          "correct_answer": "zu lösen",
+          "rule_trigger": "konjunktiv_2_vergangenheit_sein_zu",
+          "hint": "zu + Infinitiv"
+        }
+      ]
+    },
+    "explanation_markdown": "Row 6 transformations in Konjunktiv II Vergangenheit (*hätte gelöst werden können* and *wäre zu lösen gewesen*)[cite: 2, 4]."
+  },
+  {
+    "question_id": "ex5_7",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["konjunktiv_1_indirekte_rede", "passiv_ersatz_adjektiv_lich"],
+    "content": {
+      "base_sentence": "Aktiv: Man sagt, man {1} das Phänomen nicht erklären. | sich lassen: ... das Phänomen {2} sich nicht erklären. | Adjektiv: ... das Phänomen sei {3}.",
+      "translation": "People say the phenomenon cannot be explained / is inexplicable.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "könne",
+          "rule_trigger": "konjunktiv_1_indirekte_rede",
+          "hint": "Konjunktiv I of kann"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "lasse",
+          "rule_trigger": "konjunktiv_1_indirekte_rede",
+          "hint": "Konjunktiv I of lässt"
+        },
+        {
+          "placeholder_id": "{3}",
+          "correct_answer": "unerklärlich",
+          "rule_trigger": "passiv_ersatz_adjektiv_lich",
+          "hint": "un- + erklären + -lich"
+        }
+      ]
+    },
+    "explanation_markdown": "Row 7 transformations in Konjunktiv I (*könne*, *lasse sich*, *sei unerklärlich / nicht erklärlich*)[cite: 2, 4]."
+  },
+  {
+    "question_id": "ex5_8",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["plusquamperfekt_passiv_modal", "plusquamperfekt_sein_zu"],
+    "content": {
+      "base_sentence": "Passiv: Die Krankheit hatte {1} werden {2}. | sein + zu: Die Krankheit war {3} gewesen.",
+      "translation": "The illness had been curable.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "geheilt",
+          "rule_trigger": "plusquamperfekt_passiv_modal",
+          "hint": "Partizip II of heilen"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "können",
+          "rule_trigger": "plusquamperfekt_passiv_modal",
+          "hint": "Modal verb in Infinitiv"
+        },
+        {
+          "placeholder_id": "{3}",
+          "correct_answer": "zu heilen",
+          "rule_trigger": "plusquamperfekt_sein_zu",
+          "hint": "zu + Infinitiv"
+        }
+      ]
+    },
+    "explanation_markdown": "Row 8 transformations in Plusquamperfekt (*hatte geheilt werden können* and *war zu heilen gewesen*)[cite: 2, 4]."
+  },
+  {
+    "question_id": "ex6a_all",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_ersatz_adjektiv_bar", "passiv_ersatz_adjektiv_lich", "passiv_ersatz_adjektiv_abel"],
+    "content": {
+      "base_sentence": "brauchen -> {1} | transportieren -> {2} | sehen -> {3} | verwenden -> {4} | kaufen -> {5}",
+      "translation": "Form the corresponding passive-replacement adjectives.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "brauchbar",
+          "rule_trigger": "passiv_ersatz_adjektiv_bar",
+          "hint": "-bar"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "transportabel",
+          "rule_trigger": "passiv_ersatz_adjektiv_abel",
+          "hint": "-abel"
+        },
+        {
+          "placeholder_id": "{3}",
+          "correct_answer": "sichtbar",
+          "rule_trigger": "passiv_ersatz_adjektiv_bar",
+          "hint": "irregular stem + -bar"
+        },
+        {
+          "placeholder_id": "{4}",
+          "correct_answer": "verwendbar",
+          "rule_trigger": "passiv_ersatz_adjektiv_bar",
+          "hint": "-bar"
+        },
+        {
+          "placeholder_id": "{5}",
+          "correct_answer": "käuflich",
+          "rule_trigger": "passiv_ersatz_adjektiv_lich",
+          "hint": "Umlaut + -lich"
+        }
+      ]
+    },
+    "explanation_markdown": "Additional pairs from the box: *reparieren* -> **reparabel/reparierbar**, *ersetzen* -> **ersetzbar** (**unersetzlich**), *ertragen* -> **erträglich/ertragbar**, *erklären* -> **erklärlich/erklärbar**[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex6b_1",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_ersatz_adjektiv_bar", "passiv_ersatz_adjektiv_lich"],
+    "content": {
+      "base_sentence": "Jeder Computerfehler ist irgendwie {1}.",
+      "translation": "Every computer error is somehow explainable.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "erklärbar",
+          "rule_trigger": "passiv_ersatz_adjektiv_bar",
+          "hint": "Adjective from 'erklären' (-bar or -lich)"
+        }
+      ]
+    },
+    "explanation_markdown": "Both **erklärbar** and **erklärlich** are valid here[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex6b_2",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_ersatz_adjektiv_abel"],
+    "content": {
+      "base_sentence": "Das CD-Laufwerk ist kaputt und nicht mehr {1}.",
+      "translation": "The CD drive is broken and no longer repairable.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "reparabel",
+          "rule_trigger": "passiv_ersatz_adjektiv_abel",
+          "hint": "Adjective from 'reparieren'"
+        }
+      ]
+    },
+    "explanation_markdown": "From *reparieren* -> **reparabel** (or *reparierbar*)[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex6b_3",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_ersatz_adjektiv_bar"],
+    "content": {
+      "base_sentence": "Ohne USB-Anschluss ist der Computer fast un{1}.",
+      "translation": "Without a USB port, the computer is almost unusable.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "brauchbar",
+          "rule_trigger": "passiv_ersatz_adjektiv_bar",
+          "hint": "brauchen + -bar"
+        }
+      ]
+    },
+    "explanation_markdown": "Combined with the prefix *un-*, *brauchbar* becomes **unbrauchbar**[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex6b_4",
+    "difficulty_level": "B2",
+    "type": "error_correction",
+    "target_rules": ["passiv_ersatz_adjektiv_lich"],
+    "content": {
+      "flawed_sentence": "In fast allen Arbeitsbereichen ist der Computer inzwischen unersetzbar.",
+      "target_error": "unersetzbar",
+      "correct_replacement": "unersetzlich",
+      "translation": "In almost all work areas, the computer has become irreplaceable."
+    },
+    "explanation_markdown": "While the positive adjective is *ersetzbar*, the negated form meaning 'irreplaceable/indispensable' takes **-lich**: **unersetzlich**[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex6b_5",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_ersatz_adjektiv_abel", "adj_declension_nom_masc_indef"],
+    "content": {
+      "base_sentence": "Ein Laptop ist ein {1} Computer.",
+      "translation": "A laptop is a portable computer.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "transportabler",
+          "rule_trigger": "adj_declension_nom_masc_indef",
+          "hint": "transportabel + masculine nominative ending"
+        }
+      ]
+    },
+    "explanation_markdown": "When *transportabel* is declined before a noun, the *-e-* in *-abel* drops: **ein transportabler Computer**[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex6b_6",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_ersatz_adjektiv_bar"],
+    "content": {
+      "base_sentence": "Computer sind sehr vielseitig {1}.",
+      "translation": "Computers are very versatile in use.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "verwendbar",
+          "rule_trigger": "passiv_ersatz_adjektiv_bar",
+          "hint": "verwenden + -bar"
+        }
+      ]
+    },
+    "explanation_markdown": "Verb stem *verwend-* + **-bar** = **verwendbar**[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex6b_7",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_ersatz_adjektiv_lich"],
+    "content": {
+      "base_sentence": "Mehr als acht Stunden vor dem Bildschirm sind für mich un{1}.",
+      "translation": "More than eight hours in front of the screen is unbearable for me.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "erträglich",
+          "rule_trigger": "passiv_ersatz_adjektiv_lich",
+          "hint": "ertragen + Umlaut + -lich"
+        }
+      ]
+    },
+    "explanation_markdown": "With negation *un-*, *ertragen* forms **unerträglich**[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex6b_8",
+    "difficulty_level": "B2",
+    "type": "micro_translation",
+    "target_rules": ["passiv_ersatz_adjektiv_bar"],
+    "content": {
+      "native_prompt": "Translate: 'visible'",
+      "surrounding_context": "Man kann mit ¶ die Absatzzeichen [ ... ] machen.",
+      "correct_translation": "sichtbar"
+    },
+    "explanation_markdown": "From *sehen* (noun *die Sicht*) -> **sichtbar**[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex7_1",
+    "difficulty_level": "B2",
+    "type": "syntax_sorting",
+    "target_rules": ["passiv_modal_praesens"],
+    "content": {
+      "shuffled_chunks": ["viele Aktivitäten und Arbeiten", "Mit einem Computer", "durchgeführt werden.", "können"],
+      "correct_order": ["Mit einem Computer", "können", "viele Aktivitäten und Arbeiten", "durchgeführt werden."],
+      "translation": "Many activities and tasks can be carried out with a computer."
+    },
+    "explanation_markdown": "Converts *sind ... durchzuführen* into Passive with modal verb: **können ... durchgeführt werden** (Note: items 7.1 and 7.8 on the source page are identical)[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex7_2",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_modal_praesens"],
+    "content": {
+      "base_sentence": "Daten {1} auf CD oder auf einem USB-Stick {2}.",
+      "translation": "Data can be saved on a CD or on a USB stick.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "können",
+          "rule_trigger": "passiv_modal_praesens",
+          "hint": "Modal verb (possibility, plural)"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "gespeichert werden",
+          "rule_trigger": "passiv_modal_praesens",
+          "hint": "Partizip II of speichern + werden"
+        }
+      ]
+    },
+    "explanation_markdown": "*sind ... zu speichern* expresses possibility -> **können ... gespeichert werden**[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex7_3",
+    "difficulty_level": "B2",
+    "type": "error_correction",
+    "target_rules": ["passiv_modal_praesens"],
+    "content": {
+      "flawed_sentence": "Eine CD muss nicht mit fettigen Fingern angefasst werden.",
+      "target_error": "muss",
+      "correct_replacement": "darf",
+      "translation": "A CD must not be touched with greasy fingers."
+    },
+    "explanation_markdown": "*nicht + sein + zu + Infinitiv* for prohibitions translates to **nicht dürfen** (*darf nicht ... angefasst werden*), whereas *nicht müssen* means 'doesn't have to'[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex7_4",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_modal_praesens", "subordinate_verb_last"],
+    "content": {
+      "base_sentence": "Daten auf dem Stick {1} gelöscht oder überspielt {2}, während eine CD nur einmal {3}.",
+      "translation": "Data on the stick can be deleted or overwritten, whereas a CD can only be used once.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "können",
+          "rule_trigger": "passiv_modal_praesens",
+          "hint": "Modal verb (plural)"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "werden",
+          "rule_trigger": "passiv_modal_praesens",
+          "hint": "Passive auxiliary"
+        },
+        {
+          "placeholder_id": "{3}",
+          "correct_answer": "benutzt werden kann",
+          "rule_trigger": "subordinate_verb_last",
+          "hint": "Partizip II + werden + conjugated modal verb"
+        }
+      ]
+    },
+    "explanation_markdown": "In the subordinate clause (*während*), the conjugated modal verb moves to the very end: **benutzt werden kann**[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex7_5",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_modal_praesens"],
+    "content": {
+      "base_sentence": "Der Bildschirm {1} mit einem trockenen Tuch {2}.",
+      "translation": "The screen must/can be cleaned with a dry cloth.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "muss",
+          "rule_trigger": "passiv_modal_praesens",
+          "hint": "Modal verb of necessity (singular)"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "gereinigt werden",
+          "rule_trigger": "passiv_modal_praesens",
+          "hint": "Partizip II of reinigen + werden"
+        }
+      ]
+    },
+    "explanation_markdown": "Replaces *ist ... zu reinigen* with **muss/kann ... gereinigt werden**[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex7_6",
+    "difficulty_level": "B2",
+    "type": "micro_translation",
+    "target_rules": ["passiv_modal_praesens"],
+    "content": {
+      "native_prompt": "Rewrite in the Passive with 'müssen': 'Ein Anti-Viren-Programm ist zu installieren.'",
+      "surrounding_context": "[ ... ].",
+      "correct_translation": "Ein Anti-Viren-Programm muss installiert werden"
+    },
+    "explanation_markdown": "Verbs ending in *-ieren* do not take *ge-* in Partizip II: **muss/kann installiert werden**[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex7_7",
+    "difficulty_level": "B2",
+    "type": "syntax_sorting",
+    "target_rules": ["passiv_modal_praesens"],
+    "content": {
+      "shuffled_chunks": ["immer richtig", "muss", "heruntergefahren werden.", "Der Computer"],
+      "correct_order": ["Der Computer", "muss", "immer richtig", "heruntergefahren werden."],
+      "translation": "The computer must always be shut down properly."
+    },
+    "explanation_markdown": "*herunterfahren* is separable, forming Partizip II **heruntergefahren** + **werden**[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex8_1",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_modal_praesens"],
+    "content": {
+      "base_sentence": "Zwischen 22.00 und 6.00 Uhr {1} die Haustür {2}.",
+      "translation": "Between 10:00 PM and 6:00 AM, the front door must be locked.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "muss",
+          "rule_trigger": "passiv_modal_praesens",
+          "hint": "Modal verb (singular) replacing 'ist ... zu'"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "abgeschlossen werden",
+          "rule_trigger": "passiv_modal_praesens",
+          "hint": "Partizip II of abschließen + werden"
+        }
+      ]
+    },
+    "explanation_markdown": "Transforms the passive alternative *ist ... abzuschließen* into standard modal passive: **muss ... abgeschlossen werden**[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex8_2",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_ersatz_sein_zu_infinitiv"],
+    "content": {
+      "base_sentence": "Durch die Abflussleitungen – insbesondere in Bad, Küche und WC – {1} keine Abfälle {2}.",
+      "translation": "No waste is to be disposed of through the drainpipes—especially in the bathroom, kitchen, and toilet.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "sind",
+          "rule_trigger": "passiv_ersatz_sein_zu_infinitiv",
+          "hint": "sein (3rd person plural)"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "zu entsorgen",
+          "rule_trigger": "passiv_ersatz_sein_zu_infinitiv",
+          "hint": "zu + Infinitiv"
+        }
+      ]
+    },
+    "explanation_markdown": "Transforms *dürfen keine Abfälle entsorgt werden* into **sind keine Abfälle zu entsorgen**[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex8_3",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_modal_praesens", "subordinate_verb_last"],
+    "content": {
+      "base_sentence": "Wenn Schäden im Haus {1}, {2} der Eigentümer sofort {3}.",
+      "translation": "If damage in the house can be recognized, the owner must be informed immediately.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "erkannt werden können",
+          "rule_trigger": "subordinate_verb_last",
+          "hint": "Passive of 'erkennbar sind' (Partizip II + werden + können)"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "muss",
+          "rule_trigger": "passiv_modal_praesens",
+          "hint": "Modal verb (singular)"
+        },
+        {
+          "placeholder_id": "{3}",
+          "correct_answer": "informiert werden",
+          "rule_trigger": "passiv_modal_praesens",
+          "hint": "Partizip II of informieren + werden"
+        }
+      ]
+    },
+    "explanation_markdown": "Transforms *erkennbar sind* -> **erkannt werden können** and *ist ... zu informieren* -> **muss ... informiert werden**[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex8_4",
+    "difficulty_level": "B2",
+    "type": "micro_translation",
+    "target_rules": ["passiv_modal_praesens"],
+    "content": {
+      "native_prompt": "Rewrite in the Passive with 'müssen': 'Das Treppenhaus ist wöchentlich zu reinigen.'",
+      "surrounding_context": "[ ... ].",
+      "correct_translation": "Das Treppenhaus muss wöchentlich gereinigt werden"
+    },
+    "explanation_markdown": "*ist ... zu reinigen* -> **muss ... gereinigt werden**[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex8_5",
+    "difficulty_level": "B2",
+    "type": "dynamic_cloze",
+    "target_rules": ["passiv_ersatz_sein_zu_infinitiv", "separable_verbs_zu"],
+    "content": {
+      "base_sentence": "Im Treppenhaus und im Kellerflur {1} keine Fahrräder oder Krafträder {2}.",
+      "translation": "No bicycles or motorcycles are to be parked in the stairwell and basement hallway.",
+      "interactions": [
+        {
+          "placeholder_id": "{1}",
+          "correct_answer": "sind",
+          "rule_trigger": "passiv_ersatz_sein_zu_infinitiv",
+          "hint": "sein (3rd person plural)"
+        },
+        {
+          "placeholder_id": "{2}",
+          "correct_answer": "abzustellen",
+          "rule_trigger": "separable_verbs_zu",
+          "hint": "abstellen with infixed 'zu'"
+        }
+      ]
+    },
+    "explanation_markdown": "Transforms *dürfen keine ... abgestellt werden* into **sind keine ... abzustellen**[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex8_6",
+    "difficulty_level": "B2",
+    "type": "syntax_sorting",
+    "target_rules": ["passiv_modal_praesens"],
+    "content": {
+      "shuffled_chunks": ["bei Regen oder Sturm", "müssen", "Treppenhaus-, Dach- und Kellerfenster", "geschlossen werden."],
+      "correct_order": ["Treppenhaus-, Dach- und Kellerfenster", "müssen", "bei Regen oder Sturm", "geschlossen werden."],
+      "translation": "Stairwell, roof, and basement windows must be closed during rain or storms."
+    },
+    "explanation_markdown": "Transforms *sind ... zu schließen* into **müssen ... geschlossen werden**[cite: 3, 4]."
+  },
+  {
+    "question_id": "ex8_7",
+    "difficulty_level": "B2",
+    "type": "error_correction",
+    "target_rules": ["passiv_modal_praesens"],
+    "content": {
+      "flawed_sentence": "Der Abstellplatz für die Mülltonne muss von den Mietern sauber zu halten werden.",
+      "target_error": "zu halten",
+      "correct_replacement": "gehalten",
+      "translation": "The storage area for the trash can must be kept clean by the tenants."
+    },
+    "explanation_markdown": "When transforming *ist ... sauber zu halten* into the *werden*-Passive with *müssen*, the *zu*-Infinitiv becomes the Partizip II: **muss ... sauber gehalten werden**[cite: 3, 4]."
+  }
+]
