@@ -148,3 +148,19 @@ details summary { cursor: pointer; font-weight: 600; }
 .settings label { display: flex; justify-content: space-between; gap: 12px; align-items: center; margin: 10px 0; }
 .settings input, .settings select { padding: 6px 8px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }
 .settings input[type=number] { width: 80px; }
+
+/* v2 additions */
+.topbar-right { display: flex; gap: 12px; align-items: center; }
+.sync-badge { font-size: 13px; color: var(--ok); }
+.sync-badge.error { color: var(--bad); }
+.sync-error { color: var(--bad); font-size: 14px; }
+.btn.tiny { padding: 4px 10px; font-size: 13px; border-radius: 8px; }
+.btn.ghost { border-color: transparent; color: var(--muted); }
+.dot { color: var(--accent); }
+.lesson { display: flex; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); }
+.lesson span:nth-child(2) { flex: 1; }
+.lesson input { width: 18px; height: 18px; }
+.token-input { flex: 1; min-width: 200px; }
+.settings details + details { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
+.settings ol { padding-left: 20px; }
+a { color: var(--accent); }

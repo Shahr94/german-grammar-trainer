@@ -1,32 +1,48 @@
 # Grammatik-Trainer
 
-A personal German grammar trainer. Exercises live in `data/exercises.json`, and review timing uses FSRS (via the vendored [ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs) library in `vendor/`).
+A personal German grammar trainer. Reviews are scheduled with FSRS (the vendored [ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs) library), and progress syncs between devices through a private GitHub Gist.
 
-## Run it
+## Run it locally
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open http://localhost:8000. Opening `index.html` directly does not work, because the browser blocks loading the JSON file.
+Then open http://localhost:8000. Double-clicking `index.html` does not work, because the browser blocks loading the JSON files.
+
+## Adding a lesson
+
+1. Save the exercises as `data/lessons/<name>.json`, in the same format as `passiv-ersatz.json`.
+2. Add a line for it to `data/lessons.json`:
+   `{ "id": "<name>", "title": "Readable title", "file": "lessons/<name>.json" }`
+3. Optionally, add display names for new rule ids to `data/rules.json`.
+4. Check the content:
+   ```bash
+   node tools/check-content.mjs
+   ```
+
+Question ids only need to be unique within their own file, because progress is stored as `<lesson id>/<question_id>`. Don't rename a lesson id once you've practised it, or its progress will no longer match.
+
+Optional fields for other correct answers: `accepted_answers` (on a cloze gap), `accepted_translations` and `accepted_replacements`.
 
 ## How scheduling works
 
-- Each question is one FSRS card. New cards are introduced in file order, up to the daily limit set in Settings.
-- After you check an answer, the app suggests a rating: **Again** if wrong, **Hard** if you used a hint or only the capitalisation was wrong, **Good** otherwise. You can pick any rating, for example to override a strict check. Keys 1–4 pick a rating; Enter accepts the suggestion.
-- Every answer is also logged per rule (`rule_trigger` for each gap, `target_rules` otherwise). The overview uses this to show weak rules.
-- Progress is stored in the browser's localStorage. Use Settings → Export to back it up.
+- **Cards:** a rule that is the first `target_rule` of 5 or more exercises gets one shared FSRS card. Each review shows a different sentence for it, the least recently seen one. Smaller rules get one card per exercise. If added lessons push a rule over 5, its new shared card starts from that rule's existing progress.
+- **Checking:** capitalisation, punctuation, hyphens, spacing and ß/ss are ignored. Letters are not, because umlauts and endings are grammar (*lässt*/*lasst*).
+- **Rating:** the app suggests Again if the answer is wrong, Hard if you used a hint, and Good otherwise. You can override it. Keys 1–4 pick a rating; Enter accepts the suggestion.
+- **Practise:** the Practise button on each rule runs through all of that rule's exercises without changing the schedule.
+- **Lessons:** you can switch whole lessons off on the home page.
 
-## Content format
+## Sync
 
-Supported `type`s: `dynamic_cloze`, `micro_translation`, `syntax_sorting`, `error_correction`.
+Open Settings → Sync between devices and paste a GitHub token that has only the `gist` scope. Use the same token on each device. Progress is stored in a private gist called `grammatik-trainer-progress.json` and merged on every sync: the newest review of each card wins, and no review history is lost.
 
-Optional fields for alternative correct answers:
+## Tests
 
-| type | field |
-|---|---|
-| dynamic_cloze | `interactions[].accepted_answers: []` |
-| micro_translation | `content.accepted_translations: []` |
-| error_correction | `content.accepted_replacements: []` |
+```bash
+node --test tests/lib.test.mjs
+```
 
-Rule display names live in `data/rules.json`. Rules missing from that file are shown by their id. `[cite: …]` markers in explanations are hidden. The overview has a "Content check" section that flags broken items, such as placeholders that don't match their interactions.
+```bash
+node tools/check-content.mjs
+```
